@@ -1,0 +1,28 @@
+@import './../../../styles.scss';
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px 0;
+    gap: 30px;
+
+    .social-container {
+        display: flex;
+        gap: 15px;
+
+        img {
+            height: 25px;
+            width: 25px;
+        }
+    }
+
+    .lang-container {
+        span {
+            color: $frontColor;
+            text-align: center;
+        }
+    }
+}

@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+$primaryColor: #B5E93B;
+$frontColor: #FFFDFD;
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Quantico', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(88.66deg, #000000 11.41%, #2C2B2B 22.29%, #0B0A0A 37.32%, #323232 58.54%, #0B0A0A 70.03%);
+}
+
+/* quantico-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Quantico';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/assets/fonts/quantico-v17-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quantico-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Quantico';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../public/assets/fonts/quantico-v17-latin-italic.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quantico-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Quantico';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../public/assets/fonts/quantico-v17-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quantico-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Quantico';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../public/assets/fonts/quantico-v17-latin-700italic.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+app-landing-page {
+  display: flex;
+  height: 100vh;
+  max-height: 100%;
+}
