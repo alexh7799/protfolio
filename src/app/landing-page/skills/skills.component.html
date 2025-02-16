@@ -1,1 +1,26 @@
-<p>skills works!</p>
+<div class="container">
+    <div>
+        <div class="why-me-container">
+            <div>
+                <div class="why-me-header">
+                    <img src="assets/img/skills.svg" alt="">
+                </div>
+            </div>
+            <div class="text-icon-container">
+                <span>The IT landscape is continuously evolving, with new technologies and methodologies. Staying
+                    motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment
+                    to lifelong learning.</span>
+                <div class="icons-text-container">
+                    <div class="icon-container">
+                        <app-icons-name *ngFor="let iconItem of icon" [icon]="iconItem"></app-icons-name>
+                    </div>
+                    <span>I am always happy to learn new technologies,
+                        just tell me what you need.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-container">
+        <app-arrow></app-arrow>
+    </div>
+</div>

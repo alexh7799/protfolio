@@ -2,8 +2,8 @@
 
 .hero-container {
     display: flex;
-    margin-left: 105px;
-    height: 100vh;
+    height: 100%;
+    width: calc(100vw - 100px);
 
     .profile-container {
         flex: 1;
@@ -25,7 +25,18 @@
             right: 0;
 
             h1 {
+                font-size: 80px;
+                font-weight: 700;
                 color: $primaryColor;
+                margin: 0;
+            }
+
+            h2 {
+                font-size: 40px;
+                color: #000000;
+                font-weight: 700;
+                margin: 0;
+                text-shadow: -1px 0 $primaryColor, 0 1px $primaryColor, 1px 0 $primaryColor, 0 -1px $primaryColor;
             }
             
             img {
@@ -37,13 +48,13 @@
 
     .arrow-container {
         display: flex;
-        align-self: start;
+        align-self: center;
         align-items: center;
         height: 35%;
-        width: 100px;
+        width: 115px;
 
         app-arrow {
-            align-self: flex-end;
+            align-self: flex-start;
         }
     }
 }

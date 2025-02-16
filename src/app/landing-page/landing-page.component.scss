@@ -1,25 +1,20 @@
-app-hero-desktop {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-app-nav-desktop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-}
+@import './../../styles.scss';
 
 app-social-media {
     display: flex;
     justify-content: end;
     align-items: end;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 85vw;
+    width: 85%;
     height: 60px;
 }
+
+
+.container {
+    display: flex;
+    background: linear-gradient(88.66deg, #000000 11.41%, #2C2B2B 22.29%, #0B0A0A 37.32%, #323232 58.54%, #0B0A0A 70.03%);
+}
+

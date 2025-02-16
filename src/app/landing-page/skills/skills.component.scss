@@ -1,0 +1,71 @@
+@import './../../../styles.scss';
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: calc(100vw - 100px);
+    gap: 80px;
+    padding: 80px;
+    font-size: 14px;
+    line-height: 21.6px;
+}
+
+
+.why-me-container {
+    display: flex;
+    gap: 40px;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+    color: $secandColor;
+
+    .why-me-header {
+        display: flex;
+        width: 80px;
+    }
+
+    .text-icon-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 680px;
+    }
+
+    .icons-text-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 600px;
+
+            row-gap: 60px;
+            column-gap: 20px;
+    
+            app-icons-name {
+                width: 80px;
+                line-height: 18.6px;
+            }
+        }
+
+        span {
+            position: absolute;
+            left: 500px;
+            bottom: 0px;
+            width: 180px;
+            
+        }
+    }
+}
+
+.arrow-container {
+    display: flex;
+    align-self: center;
+
+    app-arrow {
+        margin-bottom: 60px;
+    }
+}

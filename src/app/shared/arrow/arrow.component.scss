@@ -1,3 +1,5 @@
+@import './../../../styles.scss';
+
 div {
     position: relative;
     display: flex;
@@ -5,5 +7,8 @@ div {
 
     img {
         width: 80px;
+        &:hover {
+            filter: drop-shadow(0px 0px 10px $primaryColor);
+        }
     }
 }

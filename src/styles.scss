@@ -1,22 +1,22 @@
 $primaryColor: #B5E93B;
-$frontColor: #FFFDFD;
+$frontColor: #4A4A4A;
+$secandColor: #FFFDFD;
 
 html,
 body {
   height: 100vh;
+  width: 100%;
   margin: 0;
-  display: flex;
+}
 
+body {
+  overflow: hidden;
 }
 
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Quantico', Arial, Helvetica, sans-serif;
-}
-
-body {
-  background: linear-gradient(88.66deg, #000000 11.41%, #2C2B2B 22.29%, #0B0A0A 37.32%, #323232 58.54%, #0B0A0A 70.03%);
 }
 
 /* quantico-regular - latin */
@@ -63,8 +63,25 @@ body {
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-app-landing-page {
+app-root {
   display: flex;
+  height: 100%;
+}
+
+app-nav-desktop {
+  width: 100px;
   height: 100vh;
-  max-height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+app-landing-page {
+  margin-left: 100px;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  
 }

@@ -1,1 +1,23 @@
-<p>why-me works!</p>
+<div class="container">
+    <div class="why-me-container">
+        <div>
+            <div class="why-me-header">
+                <img src="assets/img/Why me.svg" alt="">
+            </div>
+        </div>
+        <div class="text-icon-container">
+            <span>I am motivated to continuously learn new technologies and develop myself. My ability to solve complex
+                problems and my passion for programming make me a valuable member of your team.</span>
+            <div class="icons-contactbtn-container">
+                <h3>I am</h3>
+                <div class="icon-container">
+                    <app-icons-name *ngFor="let item of icon" [icon]="item"></app-icons-name>
+                </div>
+                <app-button [name]="'Contact me'"></app-button>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-container">
+        <app-arrow></app-arrow>
+    </div>
+</div>
