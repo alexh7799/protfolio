@@ -10,5 +10,5 @@ import { OuterlineButtonComponent } from "../../../shared/outerline-button/outer
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
-  @Input() item!: {id: number, title: string};
+  @Input() item!: {id: number, title: string, text:any, github:string, livelink: string};
 }

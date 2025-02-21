@@ -2,11 +2,61 @@
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
-    width: calc(100vw - 100px);
     gap: 80px;
     padding: 100px 0px 100px 80px;
     font-size: 14px;
     line-height: 21.6px;
+}
+
+
+.references-container {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    height: 80%;
+    width: 100%;
+    justify-content: center;
+    color: $secandColor;
+    position: relative;
+
+    .references-header {
+        display: flex;
+        width: 80px;
+    }
+
+    .references-item-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+
+        .references-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 450px;
+            height: 180px;
+            border: 1px solid $primaryColor;
+            border-radius: 30px;
+
+            .line {
+                background-color: $primaryColor;
+                height: 80%;
+                width: 2px;
+            }
+        }
+    }  
+}
+
+.arrow-container {
+    display: flex;
+    align-self: center;
+    margin-left: 40px;
+    padding-right: 20px;
+
+    app-arrow {
+        margin-bottom: 60px;
+    }
 }

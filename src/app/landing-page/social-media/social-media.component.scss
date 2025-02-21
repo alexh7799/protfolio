@@ -16,6 +16,7 @@
         img {
             height: 25px;
             width: 25px;
+            cursor: pointer;
         }
     }
 
@@ -23,6 +24,14 @@
         span {
             color: $secandColor;
             text-align: center;
+        }
+    }
+
+    .pointer {
+        cursor: pointer;
+
+        &:hover {
+            color: $primaryColor !important;
         }
     }
 }

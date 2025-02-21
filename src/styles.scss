@@ -80,8 +80,9 @@ app-nav-desktop {
 app-landing-page {
   margin-left: 100px;
   height: 100vh;
+  width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
   display: flex;
-  
+  position: relative;
 }

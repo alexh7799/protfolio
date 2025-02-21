@@ -16,6 +16,7 @@ import { ReferenceComponent } from "./reference/reference.component";
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
+
 export class LandingPageComponent {
 
 }

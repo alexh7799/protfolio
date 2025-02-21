@@ -9,4 +9,5 @@ import { Component, Input, input } from '@angular/core';
 })
 export class ButtonsComponent {
   @Input() name = '';
+  @Input() href = '';
 }
