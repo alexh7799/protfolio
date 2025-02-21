@@ -1,0 +1,14 @@
+@import './../../../styles.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 100px 0px 100px 80px;
+    font-size: 14px;
+    line-height: 21.6px;
+}
+
+.project-container {
+    display: flex;
+}

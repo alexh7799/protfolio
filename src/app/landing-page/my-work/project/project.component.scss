@@ -1,0 +1,53 @@
+@import './../../../../styles.scss';
+
+.project-container {
+    background-color: rgba(181, 233, 59, 0.30);
+    padding: 20px 30px;
+    border-radius: 20px;
+    width: 650px;
+    margin: 0 20px;
+}
+
+
+.project-header-container {
+    color: $primaryColor;
+    display: flex;
+}
+
+.content-container {
+    display: flex;
+
+    .img-btn-container {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+
+        img {
+            width: 280px;
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            width: 210px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+li {
+        
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+span {
+    color: $secandColor;
+}

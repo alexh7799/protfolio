@@ -3,9 +3,8 @@
 .container {
     display: flex;
     height: 100%;
-    width: calc(100vw - 100px);
-    gap: 80px;
-    padding: 80px 0px 80px 80px;
+    //width: calc(100vw - 100px);
+    padding: 100px 0px 100px 80px;
 }
 
 
@@ -41,13 +40,12 @@
         }
 
         .icon-container {
-            margin-top: -40px;
             width: 100%;
             display: flex;
             justify-content: center;
 
             app-icons-name {
-                width: 140px;
+                width: 160px;
             }
         }
 
@@ -61,6 +59,8 @@
 .arrow-container {
     display: flex;
     align-items: end;
+    margin-left: 40px;
+    padding-right: 20px;
     app-arrow {
         align-self: flex-end;
     }

@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { ArrowComponent } from '../../shared/arrow/arrow.component';
 import { CommonModule } from '@angular/common';
 import { IconsNameComponent } from '../../shared/icons-name/icons-name.component';

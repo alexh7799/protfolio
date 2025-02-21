@@ -8,6 +8,7 @@ import { ArrowComponent } from "../../../shared/arrow/arrow.component";
   templateUrl: './hero-desktop.component.html',
   styleUrl: './hero-desktop.component.scss'
 })
+
 export class HeroDesktopComponent {
 
 }

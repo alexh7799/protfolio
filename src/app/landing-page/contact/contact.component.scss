@@ -1,0 +1,12 @@
+@import './../../../styles.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: calc(100vw - 100px);
+    gap: 80px;
+    padding: 100px 0px 100px 80px;
+    font-size: 14px;
+    line-height: 21.6px;
+}
