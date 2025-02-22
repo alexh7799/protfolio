@@ -1,13 +1,10 @@
 @import './../../../styles.scss';
 
-
-
 .container {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin: 5px 0;
-    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
 
     .social-container {
         display: flex;
@@ -19,19 +16,29 @@
             cursor: pointer;
         }
     }
+}
 
-    .lang-container {
-        span {
-            color: $secandColor;
-            text-align: center;
+@media (min-width: 720px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 5px 0;
+        gap: 30px;
+
+        .lang-container {
+            span {
+                color: $secandColor;
+                text-align: center;
+            }
         }
-    }
 
-    .pointer {
-        cursor: pointer;
+        .pointer {
+            cursor: pointer;
 
-        &:hover {
-            color: $primaryColor !important;
+            &:hover {
+                color: $primaryColor !important;
+            }
         }
     }
 }

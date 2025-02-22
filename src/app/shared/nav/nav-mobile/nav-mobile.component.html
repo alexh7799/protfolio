@@ -1,1 +1,33 @@
-<p>nav-mobile works!</p>
+<div class="navbar-container">
+    <div class="navbar">
+        <div class="logo" (click)="onNavigate('hero')">
+            <img src="assets/img/logo.svg" alt="">
+        </div>
+        <div id="burger_menu_btn" class="burger_menu_btn" onclick="theRespMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="link-container">
+        <div class="link-to-sections">
+            <div class="link" (click)="onNavigate('why-me')">
+                <span>Why me</span>
+            </div>
+            <div class="link" (click)="onNavigate('skills')">
+                <span>Skills</span>
+            </div>
+            <div class="link" (click)="onNavigate('my-work')">
+                <span>My Work</span>
+            </div>
+            <div class="link" (click)="onNavigate('contact')">
+                <span>Contact</span>
+            </div>
+            <div class="lang-container">
+                <span class="pointer">EN</span>
+                <span> | </span>
+                <span class="pointer">DE</span>
+            </div>
+        </div>
+    </div>
+</div>

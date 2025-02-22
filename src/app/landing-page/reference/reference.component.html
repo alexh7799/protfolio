@@ -3,7 +3,13 @@
         <div class="references-container">
             <div>
                 <div class="references-header">
-                    <img src="assets/img/references.svg" alt="">
+                    <div class="headline hide-desktop">
+                        <h2 class="outline-text">References</h2>
+                    </div>
+                    <div class="hide-mobile headline">
+                        <h2>Need a teamplayer?</h2>
+                        <span>Here what my colleagues said about me</span>
+                    </div>
                 </div>
             </div>
             <div class="references-item-container">
@@ -39,6 +45,6 @@
         </div>
     </div>
     <div class="arrow-container">
-        <app-arrow></app-arrow>
+        <app-arrow [href]="'contact'"></app-arrow>
     </div>
 </div>

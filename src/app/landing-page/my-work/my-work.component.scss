@@ -1,43 +1,98 @@
 @import './../../../styles.scss';
 
 .container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 100px 0px 100px 80px;
-    font-size: 14px;
-    line-height: 21.6px;
-}
+    padding: 60px 0;
 
-.my-work-container {
-    display: flex;
-}
-
-.project-container {
-    display: flex;
-}
-
-.ongoing-container {
-    margin-left: 30px;
-    width: 260px;
-    color: $secandColor;
-
-    .ongoing-header {
-        display: flex;
-    }
-
-    .ongoing-btn-text {
+    .project-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        gap: 30px;
+    }
+
+    .ongoing-container {
+        width: 100%;
+        color: $secandColor;
+
+        .ongoing-header {
+            display: flex;
+        }
+
+        .ongoing-btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        app-button {
+            display: none;
+        }
+    }
+
+    .arrow-container {
+        display: none;
     }
 }
 
-.arrow-container {
-    display: flex;
-    align-self: flex-end;
-    align-items: end;
-    margin-left: 40px;
-    padding-right: 20px;
+@media (min-width: 720px) {
+    .container {
+        display: flex;
+        align-items: flex-start;
+        height: 100%;
+        padding-left: 60px;
+        font-size: 14px;
+        line-height: 21.6px;
+    }
+
+    .my-work-container {
+        display: flex;
+        gap: 40px;
+    }
+
+    .my-work-header {
+        flex: 1;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+
+        .headline {
+            cursor: pointer;
+            position: relative;
+            height: 260px;
+            display: flex;
+            align-items: center;
+
+            h2 {
+                position: absolute;
+                text-decoration: none;
+                transform-origin: 0 50%;
+                transform: rotate(270deg) translate(-50%, 0);
+                text-align: center;
+                font-size: 62px;
+                font-weight: 400;
+                width: 260px;
+                left: 40px;
+                margin: 0;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .project-container {
+        display: flex;
+        gap: 30px;
+    }
+
+    .ongoing-container {
+        margin-right: 30px;
+        width: 260px;
+    }
+
+    .arrow-container {
+        display: flex;
+        align-self: flex-end;
+        align-items: end;
+        margin-left: 80px;
+        padding-right: 20px;
+    }
 }

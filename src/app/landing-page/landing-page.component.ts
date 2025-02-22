@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { HeroDesktopComponent } from './hero/hero-desktop/hero-desktop.component';
+import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy, Input } from '@angular/core';
 import { SocialMediaComponent } from "./social-media/social-media.component";
 import { MyWorkComponent } from './my-work/my-work.component';
 import { WhyMeComponent } from "./why-me/why-me.component";
@@ -7,16 +6,40 @@ import { SkillsComponent } from "./skills/skills.component";
 import { ContactComponent } from "./contact/contact.component";
 import { FooterDesktopComponent } from "../shared/footer/footer-desktop/footer-desktop.component";
 import { ReferenceComponent } from "./reference/reference.component";
-
+import { HeroComponent } from './hero/hero.component';
+import { FooterMobileComponent } from "../shared/footer/footer-mobile/footer-mobile.component";
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeroDesktopComponent, SocialMediaComponent, MyWorkComponent, WhyMeComponent, SkillsComponent, ContactComponent, FooterDesktopComponent, ReferenceComponent],
+  imports: [HeroComponent, SocialMediaComponent, MyWorkComponent, WhyMeComponent, SkillsComponent, ContactComponent, FooterDesktopComponent, ReferenceComponent, FooterMobileComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
 
-export class LandingPageComponent {
+export class LandingPageComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('container') container?: ElementRef;
+  @Input() innerWidth: number = 0;
+  private scrollMultiplier = 0.5;
 
+  constructor() {}
+
+  ngAfterViewInit() {
+    this.container?.nativeElement.addEventListener('wheel', this.handleWheel);
+  }
+
+  ngOnDestroy() {
+    this.container?.nativeElement.removeEventListener('wheel', this.handleWheel);
+  }
+
+
+  private handleWheel = (e: WheelEvent) => {
+    e.preventDefault();
+    const scrollAmount = e.deltaY * this.scrollMultiplier;
+    this.container?.nativeElement.scrollBy({
+      right: scrollAmount,
+      left: scrollAmount,
+      behavior: 'auto'
+    });
+  };
 }

@@ -2,56 +2,91 @@
 
 .project-container {
     background-color: rgba(181, 233, 59, 0.30);
-    padding: 20px 30px;
+    padding: 10px 10px;
     border-radius: 20px;
-    width: 650px;
-    margin: 0 0 0 30px;
-}
 
+    .project-header-container {
+        color: $primaryColor;
+        display: flex;
+    }
 
-.project-header-container {
-    color: $primaryColor;
-    display: flex;
-}
-
-.content-container {
-    display: flex;
-
-    .img-btn-container {
-        width: 280px;
+    .content-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
 
-        img {
-            width: 280px;
-            margin-bottom: 10px;
-        }
-
-        .button-container {
-            width: 210px;
+        .img-btn-container {
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .button-container {
+                width: 210px;
+                display: flex;
+                justify-content: space-between;
+            }
         }
     }
-}
+    
+    li {
 
-li {
-        
-    > div {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
+        >div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .headline-text {
+        font-size: 17px;
+    }
+
+    span {
+        color: $secandColor;
     }
 }
 
-.headline-text {
-    font-size: 17px;
-}
+@media (min-width: 720px) {
+    .project-container {
+        background-color: rgba(181, 233, 59, 0.30);
+        padding: 20px 30px;
+        border-radius: 20px;
+        width: 650px;
+    }
 
-span {
-    color: $secandColor;
+    .project-header-container {
+        color: $primaryColor;
+        display: flex;
+    }
+
+    .content-container {
+        display: flex;
+
+        .img-btn-container {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+
+            img {
+                width: 280px;
+                margin-bottom: 10px;
+            }
+
+            .button-container {
+                width: 210px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
 }

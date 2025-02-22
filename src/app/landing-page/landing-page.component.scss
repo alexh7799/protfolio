@@ -1,23 +1,90 @@
-@import './../../styles.scss';
-
-app-social-media {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 85%;
-    height: 60px;
-}
+@import "./../../styles.scss";
 
 .container {
     display: flex;
-    background: linear-gradient(88.66deg, #000000 11.41%, #2C2B2B 22.29%, #0B0A0A 37.32%, #323232 58.54%, #0B0A0A 70.03%);
-    padding: 60px 0;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    >.background {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(20deg,
+                #000000 14%,
+                #111111 20%,
+                #0b0a0a 36%,
+                #0b0a0a 46%,
+                #181818 58%,
+                #0b0a0a 70%);
+        padding: 0 30px;
+    }
 }
 
-app-footer-desktop {
-    height: 100%;
+@media (min-width: 720px) {
+    app-social-media {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 85%;
+        height: 60px;
+        z-index: 0;
+    }
+
+    .container {
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: auto;
+        scroll-snap-align: start;
+        background-color: $primaryColor;
+
+        >.background {
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(70deg,
+                    #000000 14%,
+                    #111111 20%,
+                    #0b0a0a 36%,
+                    #0b0a0a 46%,
+                    #181818 58%,
+                    #0b0a0a 70%);
+            padding: 160px 0 60px 0;
+            min-width: max-content;
+
+            >* {
+                scroll-snap-align: start;
+            }
+
+            > app-contact {
+                min-width: calc(100vw - 200px);
+            }
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100vw;
+            height: 100%;
+            background-color: $primaryColor;
+            z-index: -1;
+        }
+    }
+
+    app-footer-desktop {
+        width: 100px !important;
+        height: 100%;
+    }
 }

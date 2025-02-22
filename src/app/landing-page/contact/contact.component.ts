@@ -9,6 +9,8 @@ import { ArrowComponent } from "../../shared/arrow/arrow.component";
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
+
 export class ContactComponent {
 
+  
 }

@@ -1,0 +1,65 @@
+@import './../../../../styles.scss';
+
+.navbar-container {
+    background-color: $primaryColor;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0px -15px 12px -10px rgba(#000000, 42%);
+
+    .navbar {
+        display: flex;
+        height: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        cursor: pointer;
+        position: relative;
+        height: 100%;
+
+        img {
+            width: 80px;
+            height: 45px;
+        }
+    }
+
+    .link-container {
+        background-color: $primaryColor;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .lang-container {
+            span {
+                color: $secandColor;
+                text-align: center;
+            }
+        }
+
+        .pointer {
+            cursor: pointer;
+
+            &:hover {
+                color: $primaryColor !important;
+            }
+        }
+    }
+}
+
+.hamburger--open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}

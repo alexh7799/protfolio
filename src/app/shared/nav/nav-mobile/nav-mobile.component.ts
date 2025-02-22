@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollbarToSectionService } from '../../services/scrollbar-to-section.service';
 
 @Component({
   selector: 'app-nav-mobile',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './nav-mobile.component.scss'
 })
 export class NavMobileComponent {
-
+  constructor(private scrollbarToSectionService: ScrollbarToSectionService) { }
+  
+    onNavigate(sectionId: string) {
+      this.scrollbarToSectionService.scrollToSection(sectionId);
+    }
 }

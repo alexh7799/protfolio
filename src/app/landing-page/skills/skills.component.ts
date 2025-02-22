@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 import { ArrowComponent } from '../../shared/arrow/arrow.component';
 import { CommonModule } from '@angular/common';
 import { IconsNameComponent } from '../../shared/icons-name/icons-name.component';
+import { ButtonsComponent } from "../../shared/buttons/buttons.component";
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [ArrowComponent, IconsNameComponent, CommonModule],
+  imports: [ArrowComponent, IconsNameComponent, CommonModule, ButtonsComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  btnText: string = "Let's talk";
   icon = [
     {image: 'angular.svg', name: 'Angular'},
     {image: 'typescript.svg', name: 'TypeScript'},

@@ -1,67 +1,147 @@
 @import './../../../styles.scss';
 
 .container {
-    display: flex;
-    height: 100%;
-    //width: calc(100vw - 100px);
-    padding: 100px 0px 100px 80px;
-}
+    padding: 60px 0;
 
-
-.why-me-container {
-    display: flex;
-    gap: 40px;
-    height: 80%;
-    width: 100%;
-    justify-content: center;
-    color: $secandColor;
-
-    .why-me-header {
-        display: flex;
-        width: 80px;
-    }
-
-    .text-icon-container {
+    .why-me-container {
         display: flex;
         flex-direction: column;
-    }
-
-    .icons-contactbtn-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
         justify-content: center;
+        color: $secandColor;
 
-        h3 {
-            color: $primaryColor;
-            font-size: 48px;
-            font-weight: 700;
-            margin: 20px 0;
-        }
-
-        .icon-container {
-            width: 100%;
+        .text-icon-container {
             display: flex;
-            justify-content: center;
-
-            app-icons-name {
-                width: 160px;
-            }
+            flex-direction: column;
         }
 
-        app-button {
-            margin-top: 40px;
-            align-self: flex-end;
+        .icons-contactbtn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            h3 {
+                color: $primaryColor;
+                font-size: 32px;
+                font-weight: 700;
+                margin: 0;
+                margin-top: 15px;
+            }
+
+            .icon-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 20px;
+
+                app-icons-name {
+                    & div {  
+                        & span {
+                            display: inline !important;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 .arrow-container {
-    display: flex;
-    align-items: end;
-    margin-left: 40px;
-    padding-right: 20px;
-    app-arrow {
-        align-self: flex-end;
+    display: none;
+}
+
+@media (min-width: 720px) {
+    .container {
+        display: flex;
+        height: 100%;
+        padding: 0;
+        padding-left: 60px;
+    }
+
+    .why-me-container {
+        display: flex;
+        flex-direction: row !important;
+        gap: 40px;
+        height: 80%;
+        width: 800px !important;
+        height: 350px;
+        justify-content: center;
+        color: $secandColor;
+
+        .why-me-header {
+            width: 90px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .headline {
+                cursor: pointer;
+                position: relative;
+                height: 230px;
+                display: flex;
+                align-items: center;
+
+                h2 {
+                    position: absolute;
+                    text-decoration: none;
+                    transform-origin: 0 50%;
+                    transform: rotate(270deg) translate(-50%, 0);
+                    text-align: center;
+                    font-size: 62px;
+                    font-weight: 400;
+                    width: 230px;
+                    left: 40px;
+                    margin: 0;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .icons-contactbtn-container {
+            display: flex;
+            align-items: flex-start !important;
+            justify-content: center !important;
+            width: 100%;
+
+            h3 {
+                color: $primaryColor;
+                font-size: 48px;
+                font-weight: 700;
+                margin: 20px 0;
+            }
+
+            .icon-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row !important;
+                justify-content: center;
+
+                app-icons-name {
+                    width: 160px;
+                }
+            }
+
+            app-button {
+                margin-top: 40px;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .arrow-container {
+        width: 100%;
+        display: flex;
+        align-items: end;
+        margin-left: 80px;
+        padding-right: 20px;
+
+        app-arrow {
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
     }
 }

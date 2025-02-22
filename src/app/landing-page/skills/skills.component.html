@@ -1,9 +1,11 @@
 <div class="container">
     <div>
-        <div class="why-me-container">
+        <div class="skill-container">
             <div>
-                <div class="why-me-header">
-                    <img src="assets/img/skills.svg" alt="">
+                <div class="skill-header">
+                    <div class="headline">
+                        <h2 class="outline-text">My Skill Set</h2>
+                    </div>
                 </div>
             </div>
             <div class="text-icon-container">
@@ -16,11 +18,13 @@
                     </div>
                 </div>
                 <span class="new-skill">I am always happy to learn new technologies,
-                    just tell me what you need.</span>
+                    just tell me what you need.
+                </span>           
             </div>
+            <app-button class="hiden-mobile" [href]="'contact'" [name]="btnText"></app-button>
         </div>
     </div>
     <div class="arrow-container">
-        <app-arrow></app-arrow>
+        <app-arrow [href]="'my-work'"></app-arrow>
     </div>
 </div>

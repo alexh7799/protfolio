@@ -1,10 +1,30 @@
-<div class="container">
-        <app-hero-desktop class="content-h-w"></app-hero-desktop>
-        <app-why-me id="why-me" class="content-h-w"></app-why-me>
-        <app-skills id="skills"></app-skills>
-        <app-my-work id="my-work"></app-my-work>
-        <app-reference></app-reference>
-        <app-contact id="contact"></app-contact>
-        <app-social-media></app-social-media>
+<div class="container hide-mobile">
+  <div class="background">
+    <app-hero id="hero"></app-hero>
+    <app-why-me id="why-me"></app-why-me>
+    <app-skills id="skills"></app-skills>
+    <app-my-work id="my-work"></app-my-work>
+    <app-reference id="references"></app-reference>
+    <app-contact id="contact"></app-contact>
+    <app-social-media></app-social-media>
+  </div>
+  <app-footer-mobile></app-footer-mobile>
 </div>
-<app-footer-desktop></app-footer-desktop>
+
+<div class="container hide-desktop" #container>
+  <div class="background">
+    <app-hero id="hero"></app-hero>
+    <app-why-me id="why-me"></app-why-me>
+    <app-skills id="skills"></app-skills>
+    <app-my-work id="my-work"></app-my-work>
+    <app-reference id="references"></app-reference>
+    <app-contact id="contact"></app-contact>
+    <app-social-media></app-social-media>
+  </div>
+  <app-footer-desktop></app-footer-desktop>
+</div>
+
+
+<!-- 
+[attr.ref]="innerWidth >= 720 ? '#container' : null"
+-->

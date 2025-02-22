@@ -1,6 +1,6 @@
-$primaryColor: #B5E93B;
-$frontColor: #4A4A4A;
-$secandColor: #FFFDFD;
+$primaryColor: #b5e93b;
+$frontColor: #4a4a4a;
+$secandColor: #fffdfd;
 
 html,
 body {
@@ -16,73 +16,116 @@ body {
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Quantico', Arial, Helvetica, sans-serif;
+  font-family: "Quantico", Arial, Helvetica, sans-serif;
 }
 
-/* quantico-regular - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Quantico';
+  font-family: "Quantico";
   font-style: normal;
   font-weight: 400;
-  src: url('../public/assets/fonts/quantico-v17-latin-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../public/assets/fonts/quantico-v17-latin-regular.woff2") format("woff2");
 }
 
-/* quantico-italic - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Quantico';
+  font-family: "Quantico";
   font-style: italic;
   font-weight: 400;
-  src: url('../public/assets/fonts/quantico-v17-latin-italic.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../public/assets/fonts/quantico-v17-latin-italic.woff2") format("woff2");
 }
 
-/* quantico-700 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Quantico';
+  font-family: "Quantico";
   font-style: normal;
   font-weight: 700;
-  src: url('../public/assets/fonts/quantico-v17-latin-700.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../public/assets/fonts/quantico-v17-latin-700.woff2") format("woff2");
 }
 
-/* quantico-700italic - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Quantico';
+  font-family: "Quantico";
   font-style: italic;
   font-weight: 700;
-  src: url('../public/assets/fonts/quantico-v17-latin-700italic.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../public/assets/fonts/quantico-v17-latin-700italic.woff2") format("woff2");
+}
+
+.hide-desktop {
+  display: none !important;
+}
+
+.hide-mobile {
+  display: flex !important;
+}
+
+app-nav-mobile {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2000;
 }
 
 app-root {
   display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
-app-nav-desktop {
-  width: 100px;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1000;
-}
-
 app-landing-page {
-  margin-left: 100px;
-  height: 100vh;
-  width: 100%;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow: hidden;
   display: flex;
   position: relative;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px $primaryColor;
+  text-stroke: 1px $primaryColor;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media (min-width: 720px) {
+  app-root {
+    flex-direction: row;
+  }
+
+  app-landing-page {
+    margin-left: 100px !important;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    position: relative;
+  }
+
+  app-nav-desktop {
+    width: 100px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+  }
+
+  .outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px $primaryColor;
+    text-stroke: 2px $primaryColor;
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .hide-desktop {
+    display: flex !important;
+  }
 }
