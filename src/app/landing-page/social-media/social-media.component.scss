@@ -18,7 +18,7 @@
     }
 }
 
-@media (min-width: 720px) {
+@media only screen and (min-width: 720px) and (min-height: 570px) {
     .container {
         display: flex;
         align-items: center;
@@ -27,6 +27,8 @@
         gap: 30px;
 
         .lang-container {
+            display: flex;
+            gap: 5px;
             span {
                 color: $secandColor;
                 text-align: center;

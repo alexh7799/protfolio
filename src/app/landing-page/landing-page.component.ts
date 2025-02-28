@@ -18,28 +18,32 @@ import { FooterMobileComponent } from "../shared/footer/footer-mobile/footer-mob
 })
 
 export class LandingPageComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('container') container?: ElementRef;
-  @Input() innerWidth: number = 0;
+  @ViewChild('desktopContainer') container?: ElementRef;
   private scrollMultiplier = 0.5;
 
-  constructor() {}
+  constructor() { }
 
   ngAfterViewInit() {
-    this.container?.nativeElement.addEventListener('wheel', this.handleWheel);
+    if (this.container) {
+      this.container.nativeElement.addEventListener('wheel', this.handleWheel);
+    }
   }
 
   ngOnDestroy() {
-    this.container?.nativeElement.removeEventListener('wheel', this.handleWheel);
+    if (this.container) {
+      this.container?.nativeElement.removeEventListener('wheel', this.handleWheel);
+    }
   }
 
-
   private handleWheel = (e: WheelEvent) => {
-    e.preventDefault();
-    const scrollAmount = e.deltaY * this.scrollMultiplier;
-    this.container?.nativeElement.scrollBy({
-      right: scrollAmount,
-      left: scrollAmount,
-      behavior: 'auto'
-    });
-  };
+    if (this.container) {
+      e.preventDefault();
+      const scrollAmount = e.deltaY * this.scrollMultiplier;
+      this.container?.nativeElement.scrollBy({
+        right: scrollAmount,
+        left: scrollAmount,
+        behavior: 'auto'
+      });
+    };
+  }
 }

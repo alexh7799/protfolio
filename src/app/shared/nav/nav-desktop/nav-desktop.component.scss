@@ -16,16 +16,10 @@
         width: 80px;
         cursor: pointer;
         position: relative;
-        height: 80px;
+        height: 60px;
 
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2000;
-            height: 80px;
+            height: 45px;
             width: 80px;
         }
     }
@@ -41,29 +35,44 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-around; // Zentriert die Links vertikal
-            gap: 48px; // Gleichmäßiger Abstand zwischen den Links
+            justify-content: space-evenly; 
 
             .link {
                 cursor: pointer;
                 position: relative;
-                height: 130px; // Feste Höhe für jeden Link
+                height: 130px;
                 display: flex;
                 align-items: center;
 
                 span {
                     position: absolute;
                     text-decoration: none;
-                    transform-origin: 0 50%; // Dreht um den linken Mittelpunkt
-                    transform: rotate(270deg) translate(-50%, 0); // Verbesserte Positionierung
+                    transform-origin: 0 50%;
+                    transform: rotate(270deg) translate(-50%, 0);
                     text-align: center;
-                    font-size: 28px;
+                    font-size: 22px;
                     font-weight: 400;
                     color: $frontColor;
                     width: 130px;
-                    left: 50px; // Horizontale Zentrierung in der Navbar
-                    white-space: nowrap; // Verhindert Textumbruch
+                    left: 50px;
+                    white-space: nowrap;
                 }
+
+                &:hover {
+                    span {
+                        color: $secandColor;
+                    }
+                }
+
+                &.active {
+                    span {
+                        color: transparent;
+                        -webkit-text-stroke: 1.5px $frontColor;
+                        text-stroke: 1.5px $frontColor;
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                }                 
             }
         }
     }
@@ -71,7 +80,7 @@
 
 @media (max-height: 600px) {
     .navbar-container {
-        width: 60px;
+        width: 100px;
 
         img {
             height: 50px;

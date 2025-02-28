@@ -16,7 +16,7 @@ export class MyWorkComponent {
   projects = [
     { 
       id: 1, 
-      title: 'Join', 
+      title: 'Project Join', 
       text: [
         { 
           headline: 'About the project', 
@@ -24,53 +24,56 @@ export class MyWorkComponent {
         }, 
         { 
           headline: 'Technologies I have used', 
-          text: 'Angular, TypeScript, HTML, CSS, Firebase' 
+          text: 'JavaScript, HTML, CSS, Firebase' 
         }, 
         { 
           headline: 'What I have  learned', 
           text: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?' 
         }
       ], 
+      img: 'join-screenshot.svg',
       github: '', 
       livelink: '' 
     },
     { 
       id: 2, 
-      title: 'Pokedex', 
+      title: 'Project Pokedex', 
       text: [
         { 
-          headline: '', 
+          headline: 'About the project', 
           text: '' 
         }, 
         { 
-          headline: '', 
+          headline: 'Technologies I have used', 
           text: '' 
         }, 
         { 
-          headline: '', 
+          headline: 'What I have  learned', 
           text: '' 
         }
       ], 
+      img: 'pokedex.svg',
       github: '', 
       livelink: '' 
     },
     { 
       id: 3, 
-      title: 'Dark Magic', 
+      title: 'Project Dark Magic', 
       text: [
         { 
-          headline: '', 
+          headline: 'About the project', 
           text: '' 
         }, 
         { 
-          headline: '', 
+          headline: 'Technologies I have used', 
           text: '' 
         }, 
         { 
-          headline: '', 
+          headline: 'What I have  learned', 
           text: '' 
         }
       ], 
+      img: 'dark-magic.svg',
       github: '', 
       livelink: '' 
     }

@@ -54,7 +54,7 @@
     display: none;
 }
 
-@media (min-width: 720px) {
+@media only screen and (min-width: 720px) and (min-height: 570px) {
     .container {
         display: flex;
         height: 100%;
@@ -133,7 +133,6 @@
     }
 
     .arrow-container {
-        width: 100%;
         display: flex;
         align-items: end;
         margin-left: 80px;

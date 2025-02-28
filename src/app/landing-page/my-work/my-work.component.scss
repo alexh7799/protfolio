@@ -15,6 +15,28 @@
 
         .ongoing-header {
             display: flex;
+            align-items: flex-end;
+            height: 38px;
+            gap: 15px;
+            margin: 10px 0 30px 0;
+
+            h3 {
+                color: $primaryColor;
+                text-align: center;
+                font-size: 28px;
+                font-weight: 400;
+                margin: 0;
+                text-align: center;
+            }
+    
+            .number-project {
+                align-self: center;
+                font-size: 48px !important;
+                font-weight: 700;
+                color: transparent;
+                -webkit-text-stroke: 1px $primaryColor;
+                text-stroke: 1px $primaryColor;
+            }
         }
 
         .ongoing-btn-text {
@@ -24,9 +46,6 @@
             gap: 20px;
         }
 
-        app-button {
-            display: none;
-        }
     }
 
     .arrow-container {
@@ -34,11 +53,12 @@
     }
 }
 
-@media (min-width: 720px) {
+@media only screen and (min-width: 720px) and (min-height: 570px) {
     .container {
         display: flex;
         align-items: flex-start;
         height: 100%;
+        padding: 0;
         padding-left: 60px;
         font-size: 14px;
         line-height: 21.6px;
@@ -79,17 +99,17 @@
     }
 
     .project-container {
-        display: flex;
+        flex-direction: row !important;
         gap: 30px;
     }
 
     .ongoing-container {
-        margin-right: 30px;
-        width: 260px;
+        margin-right: 30px !important;
+        width: 260px !important;
     }
 
     .arrow-container {
-        display: flex;
+        display: flex !important;
         align-self: flex-end;
         align-items: end;
         margin-left: 80px;

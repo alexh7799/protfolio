@@ -7,4 +7,9 @@ button {
     border-radius: 25px;
     padding: 10px 25px;
     cursor: pointer;
+
+    &:hover {
+        background-color: #b5e93b50;
+        color: $secandColor;
+    }
 }

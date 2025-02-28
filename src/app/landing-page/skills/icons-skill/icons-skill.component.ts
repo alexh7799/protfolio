@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-icons-name',
+  selector: 'app-icons-skill',
   standalone: true,
   imports: [],
-  templateUrl: './icons-name.component.html',
-  styleUrl: './icons-name.component.scss'
+  templateUrl: './icons-skill.component.html',
+  styleUrl: './icons-skill.component.scss'
 })
-export class IconsNameComponent {
+export class IconsSkillComponent {
     @Input() icon!: { image: string, name: string };
 }

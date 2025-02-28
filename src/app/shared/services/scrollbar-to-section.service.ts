@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollbarToSectionService {
+  private activeSection = new Subject<string>();
+  activeSection$ = this.activeSection.asObservable();
+
 
   constructor() { }
 
@@ -15,6 +19,7 @@ export class ScrollbarToSectionService {
         block: 'start',
         inline: 'start',
       });
+      this.activeSection.next(sectionId);
     }
   }
 }

@@ -1,28 +1,31 @@
-<div class="container hide-mobile">
-  <div class="background">
-    <app-hero id="hero"></app-hero>
-    <app-why-me id="why-me"></app-why-me>
-    <app-skills id="skills"></app-skills>
-    <app-my-work id="my-work"></app-my-work>
-    <app-reference id="references"></app-reference>
-    <app-contact id="contact"></app-contact>
-    <app-social-media></app-social-media>
-  </div>
-  <app-footer-mobile></app-footer-mobile>
-</div>
 
-<div class="container hide-desktop" #container>
-  <div class="background">
-    <app-hero id="hero"></app-hero>
-    <app-why-me id="why-me"></app-why-me>
-    <app-skills id="skills"></app-skills>
-    <app-my-work id="my-work"></app-my-work>
-    <app-reference id="references"></app-reference>
-    <app-contact id="contact"></app-contact>
-    <app-social-media></app-social-media>
+  <div class="container hide-mobile" #mobileContainer>
+    <div class="background">
+      <app-hero id="hero-mobile"></app-hero>
+      <app-why-me id="why-me-mobile"></app-why-me>
+      <app-skills id="skills-mobile"></app-skills>
+      <app-my-work id="my-work-mobile"></app-my-work>
+      <app-reference id="references-mobile"></app-reference>
+      <app-contact id="contact-mobile"></app-contact>
+      <app-social-media></app-social-media>
+    </div>
+    <app-footer-mobile></app-footer-mobile>
   </div>
-  <app-footer-desktop></app-footer-desktop>
-</div>
+  
+  <div class="container hide-desktop" #desktopContainer>
+    <div class="background">
+      <app-hero id="hero"></app-hero>
+      <app-why-me id="why-me"></app-why-me>
+      <app-skills id="skills"></app-skills>
+      <app-my-work id="my-work"></app-my-work>
+      <app-reference id="references"></app-reference>
+      <app-contact id="contact"></app-contact>
+      <app-social-media></app-social-media>
+    </div>
+    <app-footer-desktop></app-footer-desktop>
+  </div>
+
+
 
 
 <!-- 

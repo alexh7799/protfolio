@@ -33,19 +33,20 @@
     display: none;
 }
 
-@media (min-width: 720px) {
+@media only screen and (min-width: 720px) and (min-height: 570px) {
     .container {
         display: flex;
         align-items: flex-end;
         height: 100%;
+        padding: 0;
         padding-left: 60px;
         font-size: 14px;
         line-height: 21.6px;
     }
 
-
     .skill-container {
         display: flex;
+        flex-direction: row !important;
         gap: 40px;
         height: 80%;
         width: 800px;
@@ -92,31 +93,26 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            width: 600px;
+            width: 650px;
 
             .icon-container {
                 display: flex;
                 flex-wrap: wrap;
-                width: 550px;
+                gap: 40px !important;
 
-                row-gap: 20px;
-                column-gap: 20px;
-
-                app-icons-name {
-                    height: 85px;
-                    width: 65px;
+                app-icons-skill {
+                    height: 85px !important;
+                    width: 65px !important;
                     line-height: 18.6px;
+                    margin: 0 0 10px 0;
                 }
             }
 
         }
 
         .new-skill {
-            position: absolute;
-            right: 0px;
-            bottom: 0px;
-            width: 180px;
-
+            width: 150px;
+            margin-right: -40px;
         }
 
     }

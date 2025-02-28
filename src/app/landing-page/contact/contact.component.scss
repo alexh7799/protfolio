@@ -99,12 +99,14 @@
     }
 }
 
-@media (min-width: 720px) {
+@media only screen and (min-width: 720px) and (min-height: 570px) {
     .container {
         display: flex;
+        flex-direction: row !important;
         align-items: start;
         justify-content: space-between;
         height: 100%;
+        padding: 0;
         padding-left: 60px;
         font-size: 14px;
         line-height: 21.6px;
@@ -112,6 +114,7 @@
 
     .contact-container {
         gap: 80px;
+        flex-direction: row !important;
 
         .policy-container {
             margin: 0 20px;
@@ -195,6 +198,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            align-self: flex-end;
             gap: 30px;
 
             a {

@@ -13,9 +13,13 @@
             <div class="icons-contactbtn-container">
                 <h3>I am:</h3>
                 <div class="icon-container">
-                    <app-icons-name *ngFor="let item of icon" [icon]="item"></app-icons-name>
+                    <app-icons-name *ngFor="let item of icon; let i = index"
+                    [name]="item.name"
+                    [image]="item.image"
+                    (mouseenter)="changeImage(i, true)"
+                    (mouseleave)="changeImage(i, false)">></app-icons-name>
                 </div>
-                <app-button [name]="'Contact me'"></app-button>
+                <app-button [href]="'contact'" [name]="'Contact me'"></app-button>
             </div>
         </div>
     </div>
