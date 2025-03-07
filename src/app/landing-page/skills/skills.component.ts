@@ -3,11 +3,12 @@ import { ArrowComponent } from '../../shared/arrow/arrow.component';
 import { CommonModule } from '@angular/common';
 import { ButtonsComponent } from "../../shared/buttons/buttons.component";
 import { IconsSkillComponent } from './icons-skill/icons-skill.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [ArrowComponent, IconsSkillComponent, CommonModule, ButtonsComponent],
+  imports: [ArrowComponent, IconsSkillComponent, CommonModule, ButtonsComponent, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

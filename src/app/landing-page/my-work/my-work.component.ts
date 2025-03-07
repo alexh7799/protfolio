@@ -3,11 +3,12 @@ import { ArrowComponent } from '../../shared/arrow/arrow.component';
 import { ProjectComponent } from "./project/project.component";
 import { CommonModule } from '@angular/common';
 import { ButtonsComponent } from "../../shared/buttons/buttons.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [ArrowComponent, ProjectComponent, CommonModule, ButtonsComponent],
+  imports: [ArrowComponent, ProjectComponent, CommonModule, ButtonsComponent, TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss'
 })

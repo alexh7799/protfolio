@@ -1,12 +1,18 @@
 <div class="container">
     <div class="social-container">
-        <img src="assets/img/email-default.svg" alt="">
-        <img src="assets/img/linkedin-default.svg" alt="">
-        <img src="assets/img/github-default.svg" alt="">
+        <img src="assets/img/{{ icon[0].image }}"
+        (mouseenter)="changeImage(0, true)"
+        (mouseleave)="changeImage(0, false)"/>
+        <img src="assets/img/{{ icon[1].image }}"
+        (mouseenter)="changeImage(1, true)"
+        (mouseleave)="changeImage(1, false)"(click)="openExternalLink('https://www.linkedin.com/in/alexander-hoerst/')"/>
+        <img src="assets/img/{{ icon[2].image }}"
+        (mouseenter)="changeImage(2, true)"
+        (mouseleave)="changeImage(2, false)" (click)="openExternalLink('https://github.com/alexh7799')"/>
     </div>
     <div class="lang-container hide-desktop">
-        <span class="pointer">EN</span>
+        <span class="pointer" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</span>
         <span> | </span>
-        <span class="pointer">DE</span>
+        <span class="pointer" [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">DE</span>
     </div>
 </div>

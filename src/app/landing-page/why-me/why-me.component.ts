@@ -3,11 +3,12 @@ import { ButtonsComponent } from "../../shared/buttons/buttons.component";
 import { IconsNameComponent } from "./icons-name/icons-name.component";
 import { ArrowComponent } from "../../shared/arrow/arrow.component";
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-why-me',
   standalone: true,
-  imports: [ButtonsComponent, IconsNameComponent, ArrowComponent, CommonModule],
+  imports: [ButtonsComponent, IconsNameComponent, ArrowComponent, CommonModule, TranslateModule],
   templateUrl: './why-me.component.html',
   styleUrl: './why-me.component.scss'
 })

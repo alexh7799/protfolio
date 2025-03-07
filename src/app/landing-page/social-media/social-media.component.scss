@@ -37,6 +37,11 @@
 
         .pointer {
             cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &.active {
+                color: $primaryColor !important;
+            }
 
             &:hover {
                 color: $primaryColor !important;

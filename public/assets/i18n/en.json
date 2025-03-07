@@ -1,0 +1,18 @@
+{
+    "WHY_ME": {
+      "TITLE": "Why me",
+      "DESCRIPTION": "Description text here"
+    },
+    "SKILLS": {
+      "TITLE": "My Skill Set"
+    },
+    "My_Work": {
+      "TITLE": "My Work"
+    },
+    "References": {
+      "TITLE": "References"
+    },
+    "Contact": {
+      "TITLE": "Contact me"
+    }
+  }
