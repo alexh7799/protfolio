@@ -12,19 +12,39 @@
                     </div>
                 </div>
             </div>
-            <div class="references-item-container">
-                <div class="references-item"
-                    *ngFor="let reference of references; let i = index">
-                    <div class="references-item-description">
-                        <span>{{reference.description}}</span>
+            <div class="references-item-container hide-desktop">
+                    <div class="references-item"
+                        *ngFor="let reference of references; let i = index">
+                        <div class="references-item-description">
+                            <span>{{reference.description}}</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="references-item-header">
+                            <h3>{{reference.name}}</h3>
+                            <span>{{reference.project}}</span>
+                        </div>
                     </div>
-                    <div class="line"></div>
-                    <div class="references-item-header">
-                        <h3>{{reference.name}}</h3>
-                        <span>{{reference.project}}</span>
+                
+            </div>
+            <div class="references-item-container hide-mobile" #referenceContainer>
+                <div class="references-item-wrapper">
+                    <div class="references-item"
+                        *ngFor="let reference of references; let i = index">
+                        <div class="references-item-description">
+                            <span>{{reference.description}}</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="references-item-header">
+                            <h3>{{reference.name}}</h3>
+                            <span>{{reference.project}}</span>
+                        </div>
                     </div>
                 </div>
+                
             </div>
+            <div class="references-carousel-container hide-mobile">
+                <div class="references-carousel" *ngFor="let reference of references; let i = index" [class.active]="activeSection === i" (click)="slideToNextCarousel(i)"></div>
+            </div> 
         </div>
     </div>
     <div class="arrow-container">

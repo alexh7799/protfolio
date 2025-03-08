@@ -14,7 +14,7 @@
                     to lifelong learning.</span>
                 <div class="icons-text-container">
                     <div class="icon-container">
-                        <app-icons-skill *ngFor="let iconItem of icon" [icon]="iconItem"></app-icons-skill>
+                        <app-icons-skill *ngFor="let icon of icon; last as isLast" [icon]="icon" [isLast]="isLast"></app-icons-skill>
                         <span class="new-skill">I am always happy to learn new technologies,
                             just tell me what you need.
                         </span> 

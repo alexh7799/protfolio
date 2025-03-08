@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class IconsSkillComponent {
     @Input() icon!: { image: string, name: string };
+    @Input() isLast: boolean = false;
 }

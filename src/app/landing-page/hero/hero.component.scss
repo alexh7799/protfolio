@@ -2,6 +2,7 @@
 
 .hero-container {
     height: 100vh;
+    padding: 0 20px;
 
     .profile-container {
         height: 100%;
@@ -28,8 +29,10 @@
             }
 
             h2 {
-                font-size: 24px;
+                font-size: 22px;
                 font-weight: 400;
+                -webkit-text-stroke: 0px $frontColor;
+                text-stroke: 0px $frontColor;
                 color: $primaryColor;
                 margin: 0;
                 text-align: end;

@@ -3,30 +3,32 @@
         <div class="logo" (click)="onNavigate('hero-mobile')">
             <img src="assets/img/logo.svg" alt="">
         </div>
-        <div id="burger_menu_btn" class="burger_menu_btn" onclick="theRespMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="nav-menu">
+            <div id="burgermenu" class="burgermenu" [class.navbar-open]="isMenuOpen" (click)="theRespMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
     </div>
-    <div class="link-container">
+    <div class="link-container" [class.show]="isMenuOpen">
         <div class="link-to-sections">
-            <div class="link" (click)="onNavigate('why-me-mobile')">
+            <div class="link" (click)="onNavigate('why-me-mobile')" [class.active]="activeSection === 'why-me-mobile'">
                 <span>Why me</span>
             </div>
-            <div class="link" (click)="onNavigate('skills-mobile')">
+            <div class="link" (click)="onNavigate('skills-mobile')" [class.active]="activeSection === 'skills-mobile'">
                 <span>Skills</span>
             </div>
-            <div class="link" (click)="onNavigate('my-work-mobile')">
+            <div class="link" (click)="onNavigate('my-work-mobile')" [class.active]="activeSection === 'my-work-mobile'">
                 <span>My Work</span>
             </div>
-            <div class="link" (click)="onNavigate('contact-mobile')">
+            <div class="link" (click)="onNavigate('contact-mobile')" [class.active]="activeSection === 'contact-mobile'">
                 <span>Contact</span>
             </div>
             <div class="lang-container">
-                <span class="pointer">EN</span>
-                <span> | </span>
-                <span class="pointer">DE</span>
+                <span class="pointer" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</span>
+                <div class="line"></div>
+                <span class="pointer" [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">DE</span>
             </div>
         </div>
     </div>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ScrollbarToSectionService } from '../../services/scrollbar-to-section.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav-desktop',
@@ -13,7 +15,7 @@ export class NavDesktopComponent {
   activeSection: string = 'hero';
   private subscription: Subscription;
   
-  constructor(private scrollbarToSectionService: ScrollbarToSectionService) {
+  constructor(private scrollbarToSectionService: ScrollbarToSectionService, private translate: TranslateService, private router: Router) {
     this.subscription = this.scrollbarToSectionService.activeSection$.subscribe(
       section => this.activeSection = section
     );
@@ -29,6 +31,9 @@ export class NavDesktopComponent {
 
   onNavigate(sectionId: string) {
     this.activeSection = sectionId;
+    if (this.activeSection === 'hero') {
+      this.router.navigate(['/']); // Navigation zur Startseite
+    }
     this.scrollbarToSectionService.scrollToSection(sectionId);
   }
 }

@@ -14,13 +14,13 @@
 
         h3 {
             text-align: center;
-            font-size: 40px;
+            font-size: 24px;
             font-weight: 400;
             margin: 0;
         }
 
         .number-project {
-            font-size: 68px !important;
+            font-size: 48px !important;
             font-weight: 700;
             color: transparent;
             -webkit-text-stroke: 1px $primaryColor;
@@ -62,8 +62,8 @@
             position: absolute;
             left: -20px;
             color: transparent;
-            -webkit-text-stroke: 1.5px $primaryColor;
-            text-stroke: 1.5px $primaryColor;
+            -webkit-text-stroke: 1px $primaryColor;
+            text-stroke: 1px $primaryColor;
             font-size: 22px;
             font-weight: 700;
         }
@@ -98,11 +98,27 @@
     .project-header-container {
         color: $primaryColor;
         display: flex;
+
+        h3 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .number-project {
+            font-size: 68px !important;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1px $primaryColor;
+            text-stroke: 1px $primaryColor;
+        }
     }
 
     .content-container {
         display: flex;
         flex-direction: row !important;
+        justify-content: space-between;
 
         .img-btn-container {
             width: 300px !important;

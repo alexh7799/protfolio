@@ -11,13 +11,13 @@
             <div class="work-info-container hide-mobile">
                 <span>Let us work together.</span>
                 <span>Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.</span>
-                <div>
-                    <img src="assets/img/email.svg" alt="">
-                    <span >E-mail: hoerst.alexander&#64;gmail.com</span>
+                <div class="email-container" (mouseenter)="contactIcons.email.isHovered = true" (mouseleave)="contactIcons.email.isHovered = false" (mousedown)="contactIcons.email.isActive = true" (mouseup)="contactIcons.email.isActive = false">
+                    <img [src]="getContactImage('email')" alt="email">
+                    <span class="email-span" [class.active-email]="contactIcons.email.isActive">E-mail: hoerst.alexander&#64;gmail.com</span>
                 </div>
-                <div>
-                    <img src="assets/img/phone_.svg" alt="">
-                    <span>Tel: 01575 2102518</span>
+                <div class="phone-container" (mouseenter)="contactIcons.phone.isHovered = true" (mouseleave)="contactIcons.phone.isHovered = false" (mousedown)="contactIcons.phone.isActive = true" (mouseup)="contactIcons.phone.isActive = false">
+                    <img [src]="getContactImage('phone')" alt="phone">
+                    <span class="phone-span" [class.active-phone]="contactIcons.phone.isActive">Tel: 01575 2102518</span>
                 </div>
             </div>
             <div class="contact-input-container">
@@ -26,7 +26,7 @@
                 <textarea name="message" id="message" placeholder="Your message" [(ngModel)]="formData.message" [class.warning-input]="formErrors.message"[placeholder]="formErrors.message ? 'Please enter your message' : 'Your message'"></textarea>
                 <div class="policy-container">
                     <img class="checkbox" [src]="getCheckboxImage()" (click)="toggleCheckbox()" (mouseenter)="checkboxState.isHovered = true" (mouseleave)="checkboxState.isHovered = false" alt="checkbox">
-                    <span>I've read the <a href="" class="link" [class.active-link]="contactIcons.policy.isActive" (mousedown)="contactIcons.policy.isActive = true" (mouseup)="contactIcons.policy.isActive = false">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                    <span>I've read the <a href="impressum" class="link" [class.active-link]="contactIcons.policy.isActive" (mousedown)="contactIcons.policy.isActive = true" (mouseup)="contactIcons.policy.isActive = false">privacy policy</a> and agree to the processing of my data as outlined.</span>
                 </div>
                 <span class="policy-error" [class.warning-text]="formErrors.policy">
                     Please accept the privacy policy.
@@ -51,8 +51,8 @@
         <app-arrow class="hide-desktop" [href]="'hero'"></app-arrow>
         <app-arrow class="hide-mobile" [href]="'hero-mobile'"></app-arrow>
         <div class="hide-desktop">
-            <a href="" class="link" [class.active-link]="contactIcons.legalnotice.isActive" (mousedown)="contactIcons.legalnotice.isActive = true" (mouseup)="contactIcons.legalnotice.isActive = false">Legal notice</a>
-            <a href="" class="link" [class.active-link]="contactIcons.policy.isActive" (mousedown)="contactIcons.policy.isActive = true" (mouseup)="contactIcons.policy.isActive = false">privacy policy</a>
+            <a href="legal-notice" class="link" [class.active-link]="contactIcons.legalnotice.isActive" (mousedown)="contactIcons.legalnotice.isActive = true" (mouseup)="contactIcons.legalnotice.isActive = false">Legal notice</a>
+            <a href="impressum" class="link" [class.active-link]="contactIcons.policy.isActive" (mousedown)="contactIcons.policy.isActive = true" (mouseup)="contactIcons.policy.isActive = false">privacy policy</a>
             <p>&copy; Alexander Hörst 2025</p>
         </div>
     </div>
