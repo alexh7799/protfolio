@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { ArrowComponent } from '../../shared/arrow/arrow.component';
-import { ProjectComponent } from "./project/project.component";
+import { ProjectComponent } from "./project/project-desktop/project.component";
 import { CommonModule } from '@angular/common';
 import { ButtonsComponent } from "../../shared/buttons/buttons.component";
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectMobileComponent } from './project/project-mobile/project-mobile.component';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [ArrowComponent, ProjectComponent, CommonModule, ButtonsComponent, TranslateModule],
+  imports: [ArrowComponent, ProjectMobileComponent, ProjectComponent, CommonModule, ButtonsComponent, TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss'
 })

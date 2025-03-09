@@ -22,14 +22,14 @@
             align-items: center;
 
             h1 {
-                font-size: 32px;
+                font-size: 35px;
                 font-weight: 700;
                 color: $primaryColor;
                 margin: 0 0 40px 0;
             }
 
             h2 {
-                font-size: 22px;
+                font-size: 24px;
                 font-weight: 400;
                 -webkit-text-stroke: 0px $frontColor;
                 text-stroke: 0px $frontColor;
@@ -83,6 +83,8 @@
                     font-weight: 700;
                     margin: 0;
                     color: transparent;
+                    -webkit-text-stroke: 1.5px $primaryColor;
+                    text-stroke: 1.5px $primaryColor;
                     text-align: end;
                 }
 

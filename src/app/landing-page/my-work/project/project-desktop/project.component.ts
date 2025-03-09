@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ButtonsComponent } from "../../../shared/buttons/buttons.component";
-import { OuterlineButtonComponent } from "../../../shared/outerline-button/outerline-button.component";
+import { ButtonsComponent } from "../../../../shared/buttons/buttons.component";
+import { OuterlineButtonComponent } from "../../../../shared/outerline-button/outerline-button.component";
 
 @Component({
   selector: 'app-project',
