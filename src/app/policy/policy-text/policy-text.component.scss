@@ -3,6 +3,23 @@
 .container {
     padding: 20px;
     width: 100%;
+
+    h1, h2, h3 {
+        color: $primaryColor !important;
+    }
+
+    a {
+        color: $secandColor !important;
+
+        &:hover {
+            color: #D3ED97 !important;
+        }
+
+        &.active-a {
+            color: $primaryColor !important;
+            text-decoration: underline;
+        }
+    } 
 }
 
 @media only screen and (min-width: 720px) and (min-height: 570px)  {

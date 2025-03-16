@@ -11,4 +11,6 @@ export class LegalNoticeTextComponent {
   legal = {
     isActive: false
   }
+
+  
 }

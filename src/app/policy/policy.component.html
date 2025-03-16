@@ -1,14 +1,29 @@
-
 <div class="container hide-mobile" #mobileContainer>
-    <div class="background">
-      <app-policy-text></app-policy-text>
-    </div>
-    <app-footer-mobile></app-footer-mobile>
+  <div class="background">
+    <app-policy-text id="start-mobile"></app-policy-text>
+    <app-arrow class="hide-mobile" [href]="'start-mobile'"></app-arrow>
+    <app-social-media></app-social-media>
   </div>
-  
-  <div class="container hide-desktop" #desktopContainer>
-    <div class="background">
-      <app-policy-text></app-policy-text>
+  <app-footer-mobile></app-footer-mobile>
+</div>
+
+<div class="container hide-desktop" #desktopContainer>
+  <div class="background">
+    <app-policy-text id="start"></app-policy-text>
+    <div class="arrow-text-container">
+      <div class="hide-desktop">
+
+      </div>
+      <app-arrow class="hide-desktop" [href]="'start'"></app-arrow>
+      <div class="hide-desktop">
+        <a href="legal-notice" class="link" [class.active-link]="legal.isActive" (mousedown)="legal.isActive = true"
+          (mouseup)="legal.isActive = false">Legal notice</a>
+        <a href="policy" class="link" [class.active-link]="policy.isActive" (mousedown)="policy.isActive = true"
+          (mouseup)="policy.isActive = false">privacy policy</a>
+        <p>&copy; Alexander Hörst 2025</p>
+      </div>
     </div>
-    <app-footer-desktop></app-footer-desktop>
+    <app-social-media></app-social-media>
   </div>
+  <app-footer-desktop></app-footer-desktop>
+</div>
