@@ -1,0 +1,98 @@
+@import './../../../../../styles.scss';
+
+.project-container {
+    background-color: rgba(181, 233, 59, 0.30);
+    padding: 20px 30px;
+    border-radius: 20px;
+    width: 700px;
+    height: 450px;
+
+    .project-header-container {
+        color: $primaryColor;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 60px;
+
+        h3 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .number-project {
+            font-size: 68px;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1px $primaryColor;
+            text-stroke: 1px $primaryColor;
+        }
+
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .img-btn-container {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+
+            img {
+                width: 300px;
+                margin-bottom: 10px;
+                border-radius: 40px;
+            }
+
+            .button-container {
+                width: 220px;
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+            }
+        }
+    }
+    
+    li {
+        list-style: none;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            left: -20px;
+            top: 5px;
+            position: absolute;
+            color: transparent;
+            border: 1.5px solid $primaryColor;
+            border-radius: 50%;
+        }
+
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .headline-text {
+        font-size: 17px;
+    }
+
+    span {
+        color: $secandColor;
+    }
+}
+
+@media only screen and (min-width: 720px) and (min-height: 570px) {
+
+}

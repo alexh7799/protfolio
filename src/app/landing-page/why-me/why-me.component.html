@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="why-me-container">
+        <div>
+            <div class="why-me-header">
+                <div class="headline">
+                    <h2 class="outline-text">{{ 'Warum' | translate }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="text-icon-container">
+            <span>I am motivated to continuously learn new technologies and develop myself. My ability to solve complex
+                problems and my passion for programming make me a valuable member of your team.</span>
+            <div class="icons-contactbtn-container">
+                <h3>I am:</h3>
+                <div class="icon-container">
+                    <app-icons-name *ngFor="let item of icon; let i = index"
+                    [name]="item.name"
+                    [image]="item.image"
+                    (mouseenter)="changeImage(i, true)"
+                    (mouseleave)="changeImage(i, false)"></app-icons-name>
+                </div>
+                <app-button [href]="'contact'" [name]="'Contact me'"></app-button>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-container">
+        <app-arrow [href]="'skills'"></app-arrow>
+    </div>
+</div>

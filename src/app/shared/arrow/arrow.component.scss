@@ -1,0 +1,15 @@
+@import './../../../styles.scss';
+
+div {
+    position: relative;
+    display: flex;
+    align-items: end;
+
+    img {
+        cursor: pointer;
+        width: 80px;
+        &:hover {
+            filter: drop-shadow(0px 0px 10px $primaryColor);
+        }
+    }
+}

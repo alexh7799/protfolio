@@ -1,0 +1,125 @@
+@import './../../../../../styles.scss';
+
+.container {
+    width: 100%;
+
+    .show-me {
+        font-size: 14px !important;
+        margin-top: 10px;
+        color: $primaryColor !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+div {
+    width: 100%;
+}
+
+.project-container {
+    background-color: rgba(181, 233, 59, 0.30);
+    padding: 10px 10px;
+    border-radius: 20px;
+    width: 100%;
+
+    .project-header-container {
+        color: $primaryColor;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 60px;
+
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .number-project {
+            font-size: 48px !important;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1px $primaryColor;
+            text-stroke: 1px $primaryColor;
+        }
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+
+        .img-btn-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                margin-bottom: 10px;
+                border-radius: 40px;
+            }
+
+            .button-container {
+                width: 210px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    
+    li {
+        list-style: none;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            left: -20px;
+            top: 5px;
+            position: absolute;
+            color: transparent;
+            border: 1.5px solid $primaryColor;
+            border-radius: 50%;
+        }
+
+        span {
+            color: $secandColor;
+        }
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .headline-text {
+        font-size: 17px;
+    }
+
+    .show-me {
+        color: $primaryColor !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.show-less {
+    display: none !important;
+}

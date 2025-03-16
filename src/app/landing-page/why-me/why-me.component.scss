@@ -1,0 +1,146 @@
+@import './../../../styles.scss';
+
+.container {
+    padding: 60px 20px;
+
+    .why-me-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        color: $secandColor;
+
+        .text-icon-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .icons-contactbtn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            h3 {
+                color: $primaryColor;
+                font-size: 32px;
+                font-weight: 700;
+                margin: 0;
+                margin-top: 15px;
+            }
+
+            .icon-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                margin-bottom: 20px;
+
+                app-icons-name {
+                    & div {  
+                        & span {
+                            display: inline !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.arrow-container {
+    display: none;
+}
+
+@media only screen and (min-width: 720px) and (min-height: 570px) {
+    .container {
+        display: flex;
+        height: 100%;
+        padding: 0;
+        padding-left: 60px;
+    }
+
+    .why-me-container {
+        display: flex;
+        flex-direction: row !important;
+        gap: 40px;
+        height: 80%;
+        width: 800px !important;
+        height: 350px;
+        justify-content: center;
+        color: $secandColor;
+
+        .why-me-header {
+            width: 90px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .headline {
+                cursor: pointer;
+                position: relative;
+                height: 230px;
+                display: flex;
+                align-items: center;
+
+                h2 {
+                    position: absolute;
+                    text-decoration: none;
+                    transform-origin: 0 50%;
+                    transform: rotate(270deg) translate(-50%, 0);
+                    text-align: left;
+                    font-size: 62px;
+                    font-weight: 400;
+                    width: 230px;
+                    left: 40px;
+                    margin: 0;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .icons-contactbtn-container {
+            display: flex;
+            align-items: flex-start !important;
+            justify-content: center !important;
+            width: 100%;
+
+            h3 {
+                color: $primaryColor;
+                font-size: 48px;
+                font-weight: 700;
+                margin: 20px 0;
+            }
+
+            .icon-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row !important;
+                justify-content: center;
+
+                app-icons-name {
+                    width: 160px;
+                }
+            }
+
+            app-button {
+                margin-top: 40px;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .arrow-container {
+        display: flex;
+        align-items: end;
+        margin-left: 80px;
+        padding-right: 20px;
+
+        app-arrow {
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+    }
+}

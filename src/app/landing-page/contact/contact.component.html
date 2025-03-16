@@ -1,0 +1,59 @@
+<div class="container">
+    <div>
+        <div class="contact-container">
+            <div>
+                <div class="contact-header">
+                    <div class="headline">
+                        <h2 class="outline-text">{{ 'Kontakt' | translate }}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="work-info-container hide-mobile">
+                <span>Let us work together.</span>
+                <span>Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.</span>
+                <div class="email-container" (mouseenter)="contactIcons.email.isHovered = true" (mouseleave)="contactIcons.email.isHovered = false" (mousedown)="contactIcons.email.isActive = true" (mouseup)="contactIcons.email.isActive = false">
+                    <img [src]="getContactImage('email')" alt="email">
+                    <span class="email-span" [class.active-email]="contactIcons.email.isActive">E-mail: hoerst.alexander&#64;gmail.com</span>
+                </div>
+                <div class="phone-container" (mouseenter)="contactIcons.phone.isHovered = true" (mouseleave)="contactIcons.phone.isHovered = false" (mousedown)="contactIcons.phone.isActive = true" (mouseup)="contactIcons.phone.isActive = false">
+                    <img [src]="getContactImage('phone')" alt="phone">
+                    <span class="phone-span" [class.active-phone]="contactIcons.phone.isActive">Tel: 01575 2102518</span>
+                </div>
+            </div>
+            <div class="contact-input-container">
+                <input type="text" name="input-name" id="input-name" placeholder="Your name" [(ngModel)]="formData.name" [class.warning-input]="formErrors.name" [placeholder]="formErrors.name ? 'Please enter your name' : 'Your name'">
+                <input type="email" name="input-email" id="input-email" placeholder="Your e-mail" [(ngModel)]="formData.email" [class.warning-input]="formErrors.email" [placeholder]="formErrors.email ? 'Please enter your email' : 'Your email'">
+                <textarea name="message" id="message" placeholder="Your message" [(ngModel)]="formData.message" [class.warning-input]="formErrors.message"[placeholder]="formErrors.message ? 'Please enter your message' : 'Your message'"></textarea>
+                <div class="policy-container">
+                    <img class="checkbox" [src]="getCheckboxImage()" (click)="toggleCheckbox()" (mouseenter)="checkboxState.isHovered = true" (mouseleave)="checkboxState.isHovered = false" alt="checkbox">
+                    <span>I've read the <a href="policy" class="link" [class.active-link]="contactIcons.policy.isActive" (mousedown)="contactIcons.policy.isActive = true" (mouseup)="contactIcons.policy.isActive = false">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                </div>
+                <span class="policy-error" [class.warning-text]="formErrors.policy">
+                    Please accept the privacy policy.
+                </span>
+                <app-button [class.disabled]="!checkboxState.isChecked" [name]="'Send'" (click)="validateForm()"></app-button>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-text-container">
+        <div class="hide-desktop">
+            <span>Let us work together.</span>
+            <span>Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.</span>
+            <div class="email-container" (mouseenter)="contactIcons.email.isHovered = true" (mouseleave)="contactIcons.email.isHovered = false" (mousedown)="contactIcons.email.isActive = true" (mouseup)="contactIcons.email.isActive = false">
+                <img [src]="getContactImage('email')" alt="email">
+                <span class="email-span" [class.active-email]="contactIcons.email.isActive">E-mail: hoerst.alexander&#64;gmail.com</span>
+            </div>
+            <div class="phone-container" (mouseenter)="contactIcons.phone.isHovered = true" (mouseleave)="contactIcons.phone.isHovered = false" (mousedown)="contactIcons.phone.isActive = true" (mouseup)="contactIcons.phone.isActive = false">
+                <img [src]="getContactImage('phone')" alt="phone">
+                <span class="phone-span" [class.active-phone]="contactIcons.phone.isActive">Tel: 01575 2102518</span>
+            </div>
+        </div>
+        <app-arrow class="hide-desktop" [href]="'hero'"></app-arrow>
+        <app-arrow class="hide-mobile" [href]="'hero-mobile'"></app-arrow>
+        <div class="hide-desktop">
+            <a href="legal-notice" class="link" [class.active-link]="contactIcons.legalnotice.isActive" (mousedown)="contactIcons.legalnotice.isActive = true" (mouseup)="contactIcons.legalnotice.isActive = false">Legal notice</a>
+            <a href="policy" class="link" [class.active-link]="contactIcons.policy.isActive" (mousedown)="contactIcons.policy.isActive = true" (mouseup)="contactIcons.policy.isActive = false">privacy policy</a>
+            <p>&copy; Alexander Hörst 2025</p>
+        </div>
+    </div>
+</div>

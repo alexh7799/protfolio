@@ -1,0 +1,124 @@
+@import './../../../styles.scss';
+
+.container {
+    padding: 60px 20px;
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .ongoing-container {
+        margin-top: 15px;
+        width: 100%;
+        color: $secandColor;
+
+        .ongoing-header {
+            display: flex;
+            align-items: flex-end;
+            height: 38px;
+            gap: 15px;
+            margin: 10px 10px 10px 0;
+
+            h3 {
+                color: $primaryColor;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 400;
+                margin: 0;
+                text-align: center;
+            }
+    
+            .number-project {
+                align-self: center;
+                font-size: 48px !important;
+                font-weight: 700;
+                color: transparent;
+                -webkit-text-stroke: 1px $primaryColor;
+                text-stroke: 1px $primaryColor;
+            }
+        }
+
+        .ongoing-btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+    }
+
+    .arrow-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 720px) and (min-height: 570px) {
+    .container {
+        display: flex;
+        align-items: flex-start;
+        height: 100%;
+        padding: 0;
+        padding-left: 60px;
+        font-size: 14px;
+        line-height: 21.6px;
+    }
+
+    .my-work-container {
+        display: flex;
+        gap: 40px;
+    }
+
+    .my-work-header {
+        flex: 1;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+
+        .headline {
+            cursor: pointer;
+            position: relative;
+            height: 260px;
+            display: flex;
+            align-items: center;
+
+            h2 {
+                position: absolute;
+                text-decoration: none;
+                transform-origin: 0 50%;
+                transform: rotate(270deg) translate(-50%, 0);
+                text-align: center;
+                font-size: 62px;
+                font-weight: 400;
+                width: 260px;
+                left: 40px;
+                margin: 0;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .project-container {
+        flex-direction: row !important;
+        gap: 30px;
+    }
+
+    .ongoing-container {
+        margin-top: 0;
+        margin-right: 30px !important;
+        width: 260px !important;
+
+        .ongoing-header {
+            margin-bottom: 30px;
+        }
+    }
+
+    .arrow-container {
+        display: flex !important;
+        align-self: flex-end;
+        align-items: end;
+        margin-left: 80px;
+        padding-right: 20px;
+    }
+}

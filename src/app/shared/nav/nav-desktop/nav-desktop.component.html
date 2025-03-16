@@ -1,0 +1,21 @@
+<div class="navbar-container">
+    <div class="logo" (click)="onNavigate('hero')">
+        <img src="assets/img/logo.svg" alt="">
+    </div>
+    <div class="link-container">
+        <div class="link-to-sections">
+            <div class="link" (click)="onNavigate('why-me')" [class.active]="activeSection === 'why-me'">
+                <span>Why me</span>
+            </div>
+            <div class="link" (click)="onNavigate('skills')" [class.active]="activeSection === 'skills'">
+                <span>Skills</span>
+            </div>
+            <div class="link" (click)="onNavigate('my-work')" [class.active]="activeSection === 'my-work'">
+                <span>My Work</span>
+            </div>
+            <div class="link" (click)="onNavigate('contact')" [class.active]="activeSection === 'contact'">
+                <span>Contact</span>
+            </div>
+        </div>
+    </div>
+</div>
